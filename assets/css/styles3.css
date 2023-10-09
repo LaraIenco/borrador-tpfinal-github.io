@@ -1,0 +1,379 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+/* Estilos para body y header*/
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    overflow-x: hidden;
+}
+header{
+    height: 7vh;
+    background-color: whitesmoke;
+    padding: 1vh;
+}
+/* Estilos para la nav bar*/
+.logo img {
+    max-width: 16vh;
+    height: auto;
+    margin: 1vh;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+}
+
+.nav-images {
+    display: flex; 
+    margin-right: 2vh;
+}
+
+h4 {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color:#052C60;
+    margin: 1vh;
+
+}
+
+h4 img {
+    max-height: 5vh; 
+}
+
+.nav-images img {
+    width: 5vh;
+    height: auto;
+}
+.nav-images a:hover {
+    opacity: 0.7; 
+}
+/* Formulario */
+
+
+
+
+/* Esto es del carrousel/slider */
+
+.container-slider {
+    width: 100%;
+   position: relative;
+   overflow: hidden;
+   text-align: center;
+    position: relative;
+
+}
+
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.slider__section{
+    width: 100%;
+}
+
+.slider__btn{
+    position: absolute;
+    top: 50%;
+    font-size: large;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.237) ;
+    color: whitesmoke;
+    padding: 1vh 2vh;
+    border-radius: 100%;
+}
+.slider__img{
+   width: 100%;
+   height: auto;
+}
+.slider__btn--left{
+    left: 10px;
+}
+.slider__btn--right{
+    right: 30px;
+}
+
+/* Fin del codigo del carrousel/slider */
+
+
+/* Estilos para la Search Box */
+
+.search-box {
+    width: 60vh; /* Ajusta el ancho del cuadro de búsqueda según tus preferencias */
+    position: relative;
+    margin: 0 auto;
+    margin-top: -4vh; /* Ajusta la posición vertical aquí según tu diseño */
+    background: #d6d6d6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-box input[type="text"] {
+    width: 40vh; /* Ajusta el ancho del cuadro de búsqueda según tus preferencias */
+    height: 4vh;
+    padding: 1vh;
+    border: 0.2vh solid #052C60;
+    border-radius: 0.5vh;
+}
+
+.search-box button {
+    margin-left: 1vh; /* Añade un margen izquierdo para separar el botón del cuadro de búsqueda */
+    background-color: whitesmoke;
+    border: 0.2vh solid  #052C60;
+    border-radius: 0.5vh;
+    cursor: pointer;
+    padding: 0; /* Elimina el padding para que la imagen se ajuste correctamente */
+    height: 4vh; /* Ajusta el alto del botón según tus preferencias */
+    width: 4vh; /* Ajusta el ancho del botón según tus preferencias */
+
+}
+
+.search-box button img {
+    height: 50%; /* La imagen ocupará el 70% del alto del botón */
+    width: auto; /* La anchura se ajustará automáticamente */
+}
+/*Estilos para la sección de información */
+
+.informacion{
+    background-color: #d6d6d6;
+    margin-top: -4vh;
+    padding: 10vh;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Courier New';
+    
+}
+.informacion h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Alinea horizontalmente al centro */
+    font-size: 24px;
+}
+
+h3 img {
+    max-height: 5vh; 
+}
+p {
+    text-align: center; /* Alinea el texto horizontalmente al centro */
+    margin-top: 2vh;
+}
+/* Estilos para el slider de categorías */
+
+.slider-container-cat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 40vh;
+    background-color: whitesmoke;
+
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    font-weight: bold;
+    transform: translateY(-50%);
+    background-color: hsla(225, 77%, 20%, 0.408);
+    color: #052C60;
+    padding: 10px 20px;
+    border: solid #1E64BD;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#leftBtn {
+    left: 15vh;
+}
+
+#rightBtn {
+    right: 16vh;
+}
+
+.slider2 {
+    overflow: hidden;
+    width: 70%;
+}
+.slider-cat {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.slider-cat img {
+    width: 30vh; /* Cambia el tamaño de las imágenes según tus preferencias */
+    height: auto;
+    margin-right: 5vh; /* Añade margen derecho para separar los elementos */
+    margin-left: 1vh; /* Añade margen izquierdo para separar los elementos */
+}
+.slider-item {
+   text-align: center;
+   margin-top: 1vh;
+   
+}
+.slider-item img {
+    height: auto;
+    border-radius: 50%; /* Hace que las imágenes sean redondas */
+    transition: box-shadow 0.3s ease; /* Agrega una transición suave a la sombra */
+    cursor: pointer;
+}
+
+.slider-item:hover img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Agrega una sombra al pasar el mouse por encima */
+}
+.slider-item-title {
+    margin-top: 1vh; /* Añade espacio entre la imagen y el título */
+    font-size: 2vh; /* Tamaño de fuente del título */
+    font-family:sans-serif;
+    color: #000000; /* Color del texto del título */
+    margin-right: 5vh;
+}
+/* Estilos de las ofertas*/
+.ofertas-especiales{
+    background-color: whitesmoke;
+    padding: 0, 10vh;
+}
+.ofertas-especiales h2 {
+    color: white;
+    padding: 1vh;
+    background: linear-gradient(90deg, rgba(166,189,223,1) 0%, rgba(120,152,198,1) 28%, rgba(80,110,152,1) 49%, rgba(33,85,152,1) 72%, rgba(29,73,130,1) 94%);
+    }
+
+/* Slider ofertas*/ 
+
+.elemento h3{
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    padding-top:2vh ;
+}
+.elemento h6 {
+    padding: 2vh;
+}
+
+.ofertas{
+    display: flex;
+    flex-wrap:wrap ;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+
+}
+.ofertas button{
+    text-align: center;
+    font-size: 24px;
+    color: rgb(157, 185, 226);
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    margin-top: 5px;
+    border-bottom-left-radius:3vh;
+    border-bottom-right-radius:3vh ;
+}
+.add-to-cart{
+    background: rgba(33,85,152,1);
+}
+.elemento:hover{
+    box-shadow: 0 1vh 2vh rgba(12,32,91,1), 0 1vh 2vh rgba(12,32,91,1);
+    transform: translate(0px,-8px);
+}
+.elemento{
+    width: 16%;
+    margin: 2vh;
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 5vh;
+    cursor: pointer;
+    padding-top: 1vh;
+    box-shadow: 0 1vh 2vh rgba(12,32,91,1), 0 3vh 5vh rgba(12,32,91,1);
+    transition: .2s;
+    background: whitesmoke;
+}
+.elemento img{
+width: 18vh;
+height: 18vh;
+margin: 0 auto;
+text-align: center;
+display: block;
+}
+.elemento p{
+    text-align: center;
+    color: #052C60;
+    padding-top: 0 1vh;
+}
+.elemento h6{
+    font-size: 26px;
+    text-align: center;
+    color: #052C60;
+    margin: 0;
+}
+
+.promos h3, .prox-compra h3, .ofertas-especiales h3{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+    padding: 4vh ;
+    color: white;
+    background: linear-gradient(90deg, rgba(166,189,223,1) 0%, rgba(120,152,198,1) 28%, rgba(80,110,152,1) 49%, rgba(33,85,152,1) 72%, rgba(29,73,130,1) 94%);
+}
+/* Estilos las imagenes info*/
+.img-info{
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+.img-info img {
+    margin: 3vh;
+    width: 60vh;
+    border-radius: 1vh;
+}
+
+
+/* Estilos para el footer*/
+footer {
+    background: url(/assets/media/images/footer.png);
+}
+
+/* Estilos para el boton fijo de contacto*/
+
+.btn-static {
+    position: fixed; /* Fija la posición del botón */
+    bottom: 5vh; /* Ajusta la distancia desde la parte inferior según tus preferencias */
+    right: 5vh; /* Ajusta la distancia desde la derecha según tus preferencias */
+    width: 50px; /* Ajusta el ancho del botón según tus necesidades */
+    height: 50px; /* Ajusta la altura del botón según tus necesidades */
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin bordes */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    z-index: 1000;
+    border-radius: 50%;
+}
+.chat img {
+width:8vh ;
+height: 8vh;
+margin: 10px;
+
+}
+.chat{
+    border-radius: 10%;
+    width: 10vh ;
+    height: 10vh;
+    border: solid #052C60;
+}
+
