@@ -1,15 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 /* Estilos para body y header*/
 body{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    display: block;
     overflow-x: hidden;
 }
 header{
@@ -21,7 +21,7 @@ header{
 .logo img {
     max-width: 16vh;
     height: auto;
-    margin: 1vh;
+    margin: 2vh;
 }
 nav {
     display: flex;
@@ -31,32 +31,99 @@ nav {
 }
 
 .nav-images {
-    display: flex; 
-    margin-right: 2vh;
+    margin-right: 3vh;
 }
 
-h4 {
+.nav-images h4 {
     display: flex;
     align-items: center;
     font-size: 18px;
     color:#052C60;
-    margin: 1vh;
-
+    margin:4vh;
 }
 
 h4 img {
     max-height: 5vh; 
 }
 
-.nav-images img {
+.nav-images i {
     width: 5vh;
     height: auto;
 }
+
 .nav-images a:hover {
     opacity: 0.7; 
 }
-/* Formulario */
 
+/* Mi cuenta y Carrito */
+.carrito, .cuenta {
+    position: relative;
+    display: inline-block;
+    z-index: 1
+}
+
+.carrito-icon, .mi-cuenta{
+    cursor: pointer;
+    position: relative;
+}
+
+.carrito-content, .micuenta-content{
+    margin-top:5vh;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 3vh;
+    font-family: 'Poppins';
+}
+.micuenta-content form{
+  justify-content: center;
+}
+.ingresar h2{
+    text-align: center;
+    margin-bottom: 1vh;
+}
+.ingresar-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente el contenido */
+    text-align: center; /* Alinea el texto en el centro */
+}
+.ingresar-button button{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 0.5vh 2vh;
+    font-family: 'Poppins';
+    font-size: 18px;
+}
+
+button[type="submit"] {
+    margin-top: 1vh; /* Espacio entre el botón y el contenido superior */
+}
+.cuenta:hover .micuenta-content{
+    display: block;
+}
+.carrito:hover .carrito-content {
+    display: block;
+}
+
+.carrito-vacio-hover, .carrito-content h6 {
+    font-size: 16px;
+    text-align: center;
+    color: #444242;
+    margin: 20px 0;
+}
+.input {
+    display: flex;
+    align-items: center; /* Alinear verticalmente los elementos */
+    padding: 10px; /* Añadir espacio entre los elementos */
+}
+
+label {
+    margin-left: 10px; /* Espacio entre el input y la etiqueta */
+}
 
 
 
@@ -199,7 +266,7 @@ p {
 }
 
 #rightBtn {
-    right: 16vh;
+    right: 15vh;
 }
 
 .slider2 {
@@ -215,7 +282,7 @@ p {
     width: 30vh; /* Cambia el tamaño de las imágenes según tus preferencias */
     height: auto;
     margin-right: 5vh; /* Añade margen derecho para separar los elementos */
-    margin-left: 1vh; /* Añade margen izquierdo para separar los elementos */
+    margin-left: 0.5vh; /* Añade margen izquierdo para separar los elementos */
 }
 .slider-item {
    text-align: center;
@@ -235,22 +302,12 @@ p {
 .slider-item-title {
     margin-top: 1vh; /* Añade espacio entre la imagen y el título */
     font-size: 2vh; /* Tamaño de fuente del título */
-    font-family:sans-serif;
-    color: #000000; /* Color del texto del título */
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    color: hsla(225, 76%, 20%, 0.753); /* Color del texto del título */
     margin-right: 5vh;
 }
 /* Estilos de las ofertas*/
-.ofertas-especiales{
-    background-color: whitesmoke;
-    padding: 0, 10vh;
-}
-.ofertas-especiales h2 {
-    color: white;
-    padding: 1vh;
-    background: linear-gradient(90deg, rgba(166,189,223,1) 0%, rgba(120,152,198,1) 28%, rgba(80,110,152,1) 49%, rgba(33,85,152,1) 72%, rgba(29,73,130,1) 94%);
-    }
-
-/* Slider ofertas*/ 
 
 .elemento h3{
     text-align: center;
@@ -269,24 +326,11 @@ p {
     justify-content: center;
     align-items: center;
     background-color: whitesmoke;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
 
 }
-.ofertas button{
-    text-align: center;
-    font-size: 24px;
-    color: rgb(157, 185, 226);
-    width: 100%;
-    padding: 15px;
-    border: 0;
-    outline: none;
-    cursor: pointer;
-    margin-top: 5px;
-    border-bottom-left-radius:3vh;
-    border-bottom-right-radius:3vh ;
-}
-.add-to-cart{
-    background: rgba(33,85,152,1);
-}
+
 .elemento:hover{
     box-shadow: 0 1vh 2vh rgba(12,32,91,1), 0 1vh 2vh rgba(12,32,91,1);
     transform: translate(0px,-8px);
@@ -302,7 +346,7 @@ p {
     padding-top: 1vh;
     box-shadow: 0 1vh 2vh rgba(12,32,91,1), 0 3vh 5vh rgba(12,32,91,1);
     transition: .2s;
-    background: whitesmoke;
+    background-color: whitesmoke;
 }
 .elemento img{
 width: 18vh;
@@ -322,27 +366,124 @@ display: block;
     color: #052C60;
     margin: 0;
 }
-
-.promos h3, .prox-compra h3, .ofertas-especiales h3{
+.elemento button{
+    text-align: center;
+    font-size: 24px;
+    color:#031a37;
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    margin-top: 5px;
+    border-bottom-left-radius:3vh;
+    border-bottom-right-radius:3vh ;
+}
+.add-to-cart{
+    background: rgba(33,85,152,1);
+}
+.add-to-cart:hover {
+    color: rgb(157, 185, 226);
+  }
+.promos h3 , .prox-compra h3, .ofertas-especiales h3, .marcas-destacadas h3{
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 28px;
-    padding: 4vh ;
-    color: white;
-    background: linear-gradient(90deg, rgba(166,189,223,1) 0%, rgba(120,152,198,1) 28%, rgba(80,110,152,1) 49%, rgba(33,85,152,1) 72%, rgba(29,73,130,1) 94%);
+        padding: 4vh ;
+        color: white;
+        background: linear-gradient(90deg, rgba(166,189,223,1) 0%, rgba(120,152,198,1) 28%, rgba(80,110,152,1) 49%, rgba(33,85,152,1) 72%, rgba(29,73,130,1) 94%);
 }
-/* Estilos las imagenes info*/
-.img-info{
+
+/* Estilos para promos*/
+
+.banner-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.banner {
+    margin: 2vh;
+    display: flex;
+    align-items: center;
+    height: 30vh;
+    overflow: hidden;
+    background: #052C60;
+    border-radius: 3vh;
+    transition: transform 0.2s, opacity 0.2s;
+}
+.banner:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.banner img {
+    max-width: 50%; /* Ajusta el ancho de la imagen según tus necesidades */
+}
+
+.banner-content {
+    text-align: left; /* Alinea el texto a la izquierda */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.banner-content h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.banner-content a {
+    display: inline-block;
+    padding: 1vh 2vh;
+    color: rgba(166,189,223,1);
+    text-decoration: none;
+    border: solid;
+    font-weight: bold;
+}
+.banner-content a:hover{
+    color: white;
+}
+
+/* Estilos para el marcas destacadas*/
+
+.slider-marcas {
     background-color: whitesmoke;
-}
-.img-info img {
-    margin: 3vh;
-    width: 60vh;
-    border-radius: 1vh;
-}
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap; /* Evita que las marcas se envuelvan a la siguiente línea */
+  }
+  
+  .marcas {
+    display: inline-block;
+    transition: transform 0.90s ease;
+    font-size: 0;
+  }
+  
+  .lista-marcas {
+    display: inline-block;
+    box-sizing: border-box;
+    margin-right: 10vh;
+    max-width: 30vh;
+  }
+  
+  .lista-marcas img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    padding: 1vh 0 0 4vh;
+
+  }
+  
+  .slider-marcas:hover .marcas {
+    transform: translateX(-100%); /* Mueve las marcas hacia la izquierda al pasar el mouse */
+  }
+
 
 
 /* Estilos para el footer*/
@@ -377,3 +518,58 @@ margin: 10px;
     border: solid #052C60;
 }
 
+/* Responsive */
+@media (min-width: 768px) {
+    .nav-images {
+        margin-right: 3vh;
+    }
+    .nav-images h4 {
+        font-size: 18px;
+        margin: 4vh;
+    }
+    .h4 img {
+        max-height: 5vh;
+    }
+    .nav-images i {
+        width: 5vh;
+    }
+}
+
+/* Estilos para tablet (tamaño de pantalla mediano) */
+@media (max-width: 767px) {
+    .nav-images {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-images h4 {
+        font-size: 16px;
+        margin: 2vh 0;
+    }
+    .h4 img {
+        max-height: 4vh;
+    }
+    .nav-images i {
+        width: 4vh;
+    }
+}
+
+/* Estilos para dispositivos móviles (tamaño de pantalla pequeño) */
+@media (max-width: 480px) {
+    .logo img {
+        max-width: 80%;
+    }
+    .nav-images {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-images h4 {
+        font-size: 14px;
+        margin: 2vh 0;
+    }
+    .h4 img {
+        max-height: 3vh;
+    }
+    .nav-images i {
+        width: 3vh;
+    }
+}

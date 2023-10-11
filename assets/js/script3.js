@@ -78,4 +78,8 @@ function updateCategorySlider() {
 }
 //Fin Slider Categorias
 
-//Inicio Slider Ofertas
+function mostrarAlerta() {
+    alert("El producto ha sido añadido al carrito.");
+  }
+
+  //Carrito
