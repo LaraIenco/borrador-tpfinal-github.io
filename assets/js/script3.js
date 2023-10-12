@@ -63,7 +63,7 @@ leftBtn.addEventListener("click", () => {
 });
 
 rightBtn.addEventListener("click", () => {
-    const maxIndexCat = sliderCat.children.length - 4;
+    const maxIndexCat = sliderCat.children.length - 4; //Ajusto hasta que no haya nada en blanco, por eso el -4
     if (currentIndexCat < maxIndexCat) {
         currentIndexCat++;
     } else {
@@ -78,8 +78,13 @@ function updateCategorySlider() {
 }
 //Fin Slider Categorias
 
+//Carrito
+
 function mostrarAlerta() {
     alert("El producto ha sido añadido al carrito.");
-  }
+}
 
-  //Carrito
+// Novedades
+
+
+//Registro
